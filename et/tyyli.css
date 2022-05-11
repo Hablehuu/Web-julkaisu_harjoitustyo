@@ -1,0 +1,201 @@
+
+html{
+	font-family: "Dejavu Sans", sans-serif; 
+}
+
+
+body{
+	
+	background-color: white;
+	color: black;
+}
+h1{
+	
+	color: black;
+	/* font-size: 1.5em; */
+}
+h2{
+	
+	color: black;
+	/*font-size: 2em; */
+}
+
+p{
+	margin: 1em;
+}
+
+nav.main{
+	
+	margin-top: 1em;
+	padding-right: 1em;
+	float: right;
+	margin-left: 1em;
+	border: dotted #D8D7E5 0.5em;
+	background-color: #BEBCD2;
+}
+
+ul.yla{
+padding-left: 0;
+margin-left: 1.5em;
+
+}
+
+
+#yla{
+	
+	padding: 0.3em;
+	background-color: #BEBCD2;
+}
+
+
+#yla ul{
+	margin: 1em;
+	color: black;
+	
+    margin: 0;
+    padding: 0;
+}
+
+#yla ul li{
+    /*list-style-type: none; */
+    display: inline; 
+}
+
+#yla li:not(:first-child):before {
+    content: " | ";
+	color: #D8D7E5;
+}
+
+
+#kuva{
+	
+	display: inline-block;
+    text-align: center;
+}
+
+#taulukko{
+	
+	display: inline-block;
+    text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	
+	max-width: 100%;
+}
+
+
+table{
+	border: solid #D8D7E5;
+	border-collapse: collapse;
+}
+th, td{
+	border: dashed silver;
+	border-collapse: collapse;
+	padding: 0.5em;
+	text-align: center;
+	border-width: 2px;
+}
+
+.ala{
+	margin: 0;
+	float: right;
+	background-color: #BEBCD2;
+    display: inline;
+}
+iframe{
+	border: 0;
+}
+
+.ala2{
+	margin: 0;
+    display: inline;
+}
+.ala3{
+	
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.yla{
+	
+	color: black;
+	background-color: #BEBCD2;
+	/*font-size: 1.5em; */
+}
+.ala4{
+	padding: 0.3em;
+	background-color: #BEBCD2;
+	/*font-size: 1.5em; */
+}
+#galleria {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.gallery{
+	/*display: inline-block;*/ 
+	text-align: center;
+	/*flex: auto; */
+}
+
+
+
+
+@media all and ( max-width: 600px ) {
+	nav.main{
+		margin-top: 0;
+		margin: 0;
+		padding: 0;
+		float: none;
+		border: none;
+		background-color: #BEBCD2;
+		width: 100%;
+		border-collapse: collapse;
+		
+	}
+	ul.yla{
+		
+	margin-top: 0;
+	padding-top: 0;
+	
+	}
+	
+	
+	#yla {
+		
+		
+		
+	}
+	
+	#yla ul{
+		
+		color: black;
+		background-color: #BEBCD2;
+		margin-left: 1.5em;
+		
+		
+	}
+
+	#yla ul li{
+		
+		display: list-item;
+		
+	}
+
+	#yla li:before {
+		display: none;
+		
+		
+	}
+	img{
+		padding-left: 0;
+		max-width: 100%;
+	}
+	iframe{
+	width: 100%;
+	}
+	
+}

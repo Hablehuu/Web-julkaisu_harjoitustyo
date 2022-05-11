@@ -1,0 +1,226 @@
+ Script started on Sun Nov 24 06:38:30 2019
+ bash-4.2$ tree
+ .
+  diam
+   luctus
+       non.txt
+  fermentum
+   purus
+    ut.txt
+   tellus
+       porta.txt
+  itkp1011.txt
+  ohje.txt
+  taso5.txt
+ 5 directories, 6 files
+ bash-4.2$ cd fermentum
+ bash-4.2$ mkdir consequat
+ bash-4.2$ cd ..
+ bash-4.2$ tree
+ .
+  diam
+   luctus
+       non.txt
+  fermentum
+   consequat
+   purus
+    ut.txt
+   tellus
+       porta.txt
+  itkp1011.txt
+  ohje.txt
+  taso5.txt
+ 6 directories, 6 files
+ bash-4.2$ mkdir tempus
+ bash-4.2$ cd tempus
+ bash-4.2$ mkdir lectus
+ bash-4.2$ mkdir odio
+ bash-4.2$ cd ..
+ bash-4.2$ tree
+ .
+  diam
+   luctus
+       non.txt
+  fermentum
+   consequat
+   purus
+    ut.txt
+   tellus
+       porta.txt
+  itkp1011.txt
+  ohje.txt
+  taso5.txt
+  tempus
+      lectus
+      odio
+ 9 directories, 6 files
+ bash-4.2$ cp itkp1011.txt /tempus/odio/sed.txt
+ cp: cannot create regular file /tempus/odio/sed.txt: No such file or directory
+ bash-4.2$ cp itkp1011.txt tempus/odio/sed.txt
+ bash-4.2$ tree
+ .
+  diam
+   luctus
+       non.txt
+  fermentum
+   consequat
+   purus
+    ut.txt
+   tellus
+       porta.txt
+  itkp1011.txt
+  ohje.txt
+  taso5.txt
+  tempus
+      lectus
+      odio
+          sed.txt
+ 9 directories, 7 files
+ bash-4.2$ mv diam/luctus/non.txt fermentum
+ bash-4.2$ tree
+ .
+  diam
+   luctus
+  fermentum
+   consequat
+   non.txt
+   purus
+    ut.txt
+   tellus
+       porta.txt
+  itkp1011.txt
+  ohje.txt
+  taso5.txt
+  tempus
+      lectus
+      odio
+          sed.txt
+ 9 directories, 7 files
+ bash-4.2$ cd fermentum/tellus
+ bash-4.2$ ls -l
+ total 0
+ -rw-r--r--. 1 saseilmo users 0 Nov 24 06:38 porta.txt
+ bash-4.2$ ^C
+ bash-4.2$ chmod g+x porta.txt
+ bash-4.2$ chmod g+x porta.txt
+>           ls -l
+ total 0
+ -rw-r-xr--. 1 saseilmo users 0 Nov 24 06:38 porta.txt
+ bash-4.2$ chmod u=x
+ chmod: missing operand after u=x
+ Try 'chmod --help' for more information.
+ bash-4.2$ chmod u=x porta.txt
+ bash-4.2$ chmod o=r porta.txt
+ bash-4.2$ ls -l u=xporta.txt
+ total 0
+ ---xr-xr--. 1 saseilmo users 0 Nov 24 06:38 porta.txt
+ bash-4.2$ tarkista
+ Tiedosto sed.txt ei ole oikeassa kansiossa.
+ Tiedosto ut.txt ei ole oikeassa kansiossa.
+ porta.txt	ryhm : lukuoikeus pit poistaa
+ porta.txt	ryhm : kirjoitusoikeus puuttuu
+ Taso 5 puuttuu kokonaan tai on toteutettu vrin
+ Komentorivitehtvsi on hyltty. Yrit uudelleen.
+ bash-4.2$ chmod g+w porta.txt
+ bash-4.2$ chmod g-r porta.txt
+ bash-4.2$ cd ..
+ bash-4.2$ tree
+ .
+  consequat
+  non.txt
+  purus
+   ut.txt
+  tellus
+      porta.txt
+ 3 directories, 3 files
+ bash-4.2$ cd ..
+ bash-4.2$ tree
+ .
+  diam
+   luctus
+  fermentum
+   consequat
+   non.txt
+   purus
+    ut.txt
+   tellus
+       porta.txt
+  itkp1011.txt
+  ohje.txt
+  taso5.txt
+  tempus
+      lectus
+      odio
+          sed.txt
+ 9 directories, 7 files
+ bash-4.2$ mv tempus/odio/sed.txt tempus/lectus
+ bash-4.2$ mv tempus/odio/sed.txt tempus/lectus
+>           tree
+ .
+  diam
+   luctus
+  fermentum
+   consequat
+   non.txt
+   purus
+    ut.txt
+   tellus
+       porta.txt
+  itkp1011.txt
+  ohje.txt
+  taso5.txt
+  tempus
+      lectus
+       sed.txt
+      odio
+ 9 directories, 7 files
+ bash-4.2$ cp fermentum/purus/ut.txt tempus/odio
+ bash-4.2$ tree
+ .
+  diam
+   luctus
+  fermentum
+   consequat
+   non.txt
+   purus
+    ut.txt
+   tellus
+       porta.txt
+  itkp1011.txt
+  ohje.txt
+  taso5.txt
+  tempus
+      lectus
+       sed.txt
+      odio
+          ut.txt
+ 9 directories, 8 files
+ bash-4.2$ tarkista
+ Taso 5 puuttuu kokonaan tai on toteutettu vrin
+ Komentorivitehtvsi on hyvksytty arvosanalla 3
+ Muista lopettaa valmis tehtv exit-komennolla! 
+ 0f6c6af9fc4974edf042e8f1dc1d85a0bced0ff31cc48d6c356d4c386d81ed92a68a2530328e66f8bfc484bc6d160f2eaffe0e1bc1f6239df54a169cca4f8464
+ bash-4.2$ exit
+ exit
+ /tmp/saseilmo/
+  [drwxr-xr-x saseilmo]  diam
+   [drwxr-xr-x saseilmo]  luctus
+  [drwxr-xr-x saseilmo]  fermentum
+   [drwxr-xr-x saseilmo]  consequat
+   [-rw-r--r-- saseilmo]  non.txt
+   [drwxr-xr-x saseilmo]  purus
+    [-rw-r--r-- saseilmo]  ut.txt
+   [drwxr-xr-x saseilmo]  tellus
+       [---x-wxr-- saseilmo]  porta.txt
+  [-rw-r--r-- saseilmo]  itkp1011.txt
+  [-rw-r--r-- saseilmo]  ohje.txt
+  [-rw-r--r-- saseilmo]  taso5.txt
+  [drwxr-xr-x saseilmo]  tempus
+      [drwxr-xr-x saseilmo]  lectus
+       [-rw-r--r-- saseilmo]  sed.txt
+      [drwxr-xr-x saseilmo]  odio
+          [-rw-r--r-- saseilmo]  ut.txt
+ Taso 5 puuttuu kokonaan tai on toteutettu vrin
+ Komentorivitehtvsi on hyvksytty arvosanalla 3
+ Muista lopettaa valmis tehtv exit-komennolla! 
+ 0f6c6af9fc4974edf042e8f1dc1d85a0bced0ff31cc48d6c356d4c386d81ed92a68a2530328e66f8bfc484bc6d160f2eaffe0e1bc1f6239df54a169cca4f8464
